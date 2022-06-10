@@ -59,7 +59,7 @@ public class AlumnoArreglo {
     }
     
     public void  ordenarBurbuja(){ 
-       
+        System.out.println("prueba");
     }
     
     public void  ordenarInserccion(){ 
