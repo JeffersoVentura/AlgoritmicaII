@@ -63,6 +63,7 @@ public class AlumnoArreglo {
         int cod = Integer.valueOf(codigo);
         int arregloC[], aux;
         arregloC = new int[cod];
+        
         for (int i = 1; i < (cod-1); i++ ){
             for (int j = 0; j < (cod-1); j++){
                 if(arregloC[j] > arregloC[j+1]){
@@ -74,8 +75,23 @@ public class AlumnoArreglo {
         }
     }
     
-    public void  ordenarInserccion(){ 
-
+    public void  ordenarInserccion(String codigo){ 
+        
+        int cod = Integer.valueOf(codigo);
+        int arregloC[], aux, pos;
+        arregloC = new int[cod];
+        
+        for (int i = 1; i < (cod-1); i++ ){
+            pos = i;
+            aux = arregloC[i];
+            
+            while((pos > 0) && (arregloC[pos-1] > aux)){
+                arregloC[pos] = arregloC[pos-1];
+                pos--;
+            }
+            arregloC[pos] = aux;
+        }
+        
     }
     
     public void  ordenarSeleccion(){ 
