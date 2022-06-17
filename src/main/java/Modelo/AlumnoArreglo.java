@@ -58,8 +58,20 @@ public class AlumnoArreglo {
         return result;
     }
     
-    public void  ordenarBurbuja(){ 
-        System.out.println("prueba");
+    public void  ordenarBurbuja(String codigo){ 
+        
+        int cod = Integer.valueOf(codigo);
+        int arregloC[], aux;
+        arregloC = new int[cod];
+        for (int i = 1; i < (cod-1); i++ ){
+            for (int j = 0; j < (cod-1); j++){
+                if(arregloC[j] > arregloC[j+1]){
+                    aux = arregloC[j];
+                    arregloC[j] = arregloC[j+1];
+                    arregloC[j+1] =  aux;
+                }
+            }
+        }
     }
     
     public void  ordenarInserccion(){ 
